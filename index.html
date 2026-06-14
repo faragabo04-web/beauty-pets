@@ -844,16 +844,16 @@ footer {
   gap: 1rem;
 }
 .foot-credit {
+  margin-left: auto;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  color: rgba(247, 243, 235, 0.9);
   text-align: right;
-  margin-top: -1.35rem;
-  font-size: 0.82rem;
-  letter-spacing: 0.05em;
-  color: rgba(247, 243, 235, 0.82);
 }
 .foot-credit a {
   color: var(--gold);
-  font-weight: 700;
-  border-bottom: 1px solid rgba(214, 171, 101, 0.6);
+  font-weight: 800;
+  border-bottom: 1px solid rgba(214, 171, 101, 0.7);
   transition: color .25s ease, border-color .25s ease, opacity .25s ease;
 }
 .foot-credit a:hover {
@@ -863,8 +863,8 @@ footer {
 }
 @media (max-width: 760px) {
   .foot-credit {
+    margin-left: 0;
     text-align: left;
-    margin-top: 0.8rem;
   }
 }
 
@@ -1598,9 +1598,8 @@ footer {
 
     <div class="foot-bottom">
       <span>© <span id="year"></span> Beauty Pets · Damac Hills 2 · Dubai, UAE. All rights reserved.</span>
-      <span>Crafted with care for every paw, fin &amp; feather.</span>
+      <span class="foot-credit">Website by <a href="https://afaq-digital.vercel.app" target="_blank" rel="noopener">AFAQ Digital</a></span>
     </div>
-    <p class="foot-credit">Website by <a href="https://afaq-digital.vercel.app" target="_blank" rel="noopener">AFAQ Digital</a></p>
   </div>
 </footer>
 
