@@ -754,8 +754,32 @@ section { padding: clamp(4rem, 9vw, 7rem) 0; position: relative; }
   min-height: 460px;
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
 .map-link iframe { width: 100%; height: 100%; border: 0; min-height: 460px; display: block; }
+.map-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(15, 42, 40, 0.82));
+  padding: 2.5rem 1.6rem 1.4rem;
+  pointer-events: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.map-overlay-label {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+}
+.map-overlay-cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+}
 
 /* ============ CTA Banner ============ */
 .cta-banner {
@@ -1518,18 +1542,23 @@ footer {
 
       <div class="map-wrap reveal">
         <a
-          href="https://www.google.com/maps/place/Beauty+Pets+-+Damac+Hills+2/@24.98508,55.3912383,17z/data=!3m1!4b1!4m14!1m7!3m6!1s0x3e5f7b0072f768c3:0x4e3216d088f31ca7!2sZawia+AlNasr+Gents+Salon!8m2!3d24.9845379!4d55.3929407!16s%2Fg%2F11vzw9y4j3!3m5!1s0x3e5f7b9eb3382f35:0xf279ee85fa29b615!8m2!3d24.98508!4d55.3938132!16s%2Fg%2F11wr3g1f5x?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+          href="https://www.google.com/maps/place/Beauty+Pets+-+Damac+Hills+2/@24.9847831,55.3932393,234m/data=!3m1!1e3!4m10!1m2!2m1!1sbeauty+pets+damac+hills+2+24.98508+55.3938132!3m6!1s0x3e5f7b9eb3382f35:0xf279ee85fa29b615!8m2!3d24.98508!4d55.3938132!15sCihibGVhdXR5IHBldHMgZGFtYWMgaGlsbHMgMiAyNC45ODUwOCA1NS4zOTM4MTMyWh8iHWJlYXV0eSBwZXRzIGRhbWFjIGhpbGxzIDIqAggDkgEQcGV0X3N1cHBseV9zdG9yZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOTGVFOVlYM2xSUlJBQuABAPoBBAgAEBM!16s%2Fg%2F11wr3g1f5x?hl=en-US&entry=ttu"
           target="_blank"
           rel="noopener noreferrer"
           class="map-link"
-          aria-label="Open Beauty Pets location in Google Maps"
+          aria-label="Open Beauty Pets on Google Maps"
         >
           <iframe
             src="https://maps.google.com/maps?cid=17472258488555648533&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Beauty Pets — Damac Hills 2, Madinat Hind 4, Dubai">
+            title="Beauty Pets — Damac Hills 2, Madinat Hind 4, Dubai"
+            style="pointer-events: none;">
           </iframe>
+          <div class="map-overlay">
+            <span class="map-overlay-label">Beauty Pets - Damac Hills 2</span>
+            <span class="map-overlay-cta">Open in Google Maps ↗</span>
+          </div>
         </a>
       </div>
     </div>
