@@ -1067,6 +1067,43 @@ footer {
     transition-duration: 0.001ms !important;
   }
 }
+.foot-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.foot-credit {
+  position: static !important;
+  margin: 0 0 0 auto !important;
+  text-align: right;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  color: rgba(247, 243, 235, 0.9);
+  white-space: nowrap;
+}
+.foot-credit a {
+  color: var(--gold);
+  font-weight: 800;
+  border-bottom: 1px solid rgba(214, 171, 101, 0.7);
+  transition: color .25s ease, border-color .25s ease, opacity .25s ease;
+}
+.foot-credit a:hover {
+  color: #f7f3eb;
+  border-color: #f7f3eb;
+  opacity: 1;
+}
+@media (max-width: 760px) {
+  .foot-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .foot-credit {
+    margin-left: 0 !important;
+    text-align: left;
+    white-space: normal;
+  }
+}
 </style>
 </head>
 <body>
@@ -1596,11 +1633,10 @@ footer {
       </div>
     </div>
 
-    <div class="foot-bottom">
-      <span>© <span id="year"></span> Beauty Pets · Damac Hills 2 · Dubai, UAE. All rights reserved.</span>
-      <span class="foot-credit">Website by <a href="https://afaq-digital.vercel.app" target="_blank" rel="noopener">AFAQ Digital</a></span>
-    </div>
-  </div>
+      <div class="foot-bottom">
+    <span>© <span id="year"></span> Beauty Pets · Damac Hills 2 · Dubai, UAE. All rights reserved.</span>
+    <span class="foot-credit">Website by <a href="https://afaq-digital.vercel.app" target="_blank" rel="noopener">AFAQ Digital</a></span>
+  </div></div>
 </footer>
 
 <!-- ============ WhatsApp Float ============ -->
