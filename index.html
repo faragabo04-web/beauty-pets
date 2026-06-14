@@ -300,9 +300,15 @@ section { padding: clamp(4rem, 9vw, 7rem) 0; position: relative; }
   position: relative;
   aspect-ratio: 4/5;
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-lg);
   transform: rotate(0.5deg);
+}
+.hero-img {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 .hero-visual img {
   width: 100%; height: 100%;
@@ -849,6 +855,7 @@ footer {
   letter-spacing: 0.04em;
   color: rgba(247, 243, 235, 0.9);
   text-align: right;
+  white-space: nowrap;
 }
 .foot-credit a {
   color: var(--gold);
@@ -865,6 +872,7 @@ footer {
   .foot-credit {
     margin-left: 0;
     text-align: left;
+    white-space: normal;
   }
 }
 
@@ -1067,43 +1075,7 @@ footer {
     transition-duration: 0.001ms !important;
   }
 }
-.foot-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.foot-credit {
-  position: static !important;
-  margin: 0 0 0 auto !important;
-  text-align: right;
-  font-size: 0.86rem;
-  letter-spacing: 0.04em;
-  color: rgba(247, 243, 235, 0.9);
-  white-space: nowrap;
-}
-.foot-credit a {
-  color: var(--gold);
-  font-weight: 800;
-  border-bottom: 1px solid rgba(214, 171, 101, 0.7);
-  transition: color .25s ease, border-color .25s ease, opacity .25s ease;
-}
-.foot-credit a:hover {
-  color: #f7f3eb;
-  border-color: #f7f3eb;
-  opacity: 1;
-}
-@media (max-width: 760px) {
-  .foot-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .foot-credit {
-    margin-left: 0 !important;
-    text-align: left;
-    white-space: normal;
-  }
-}
+
 </style>
 </head>
 <body>
@@ -1180,7 +1152,9 @@ footer {
     </div>
 
     <div class="hero-visual reveal">
-      <img src="images/selected-work-04.jpg" alt="A happy groomed golden retriever at Beauty Pets" loading="eager" />
+      <div class="hero-img">
+        <img src="images/selected-work-04.jpg" alt="A happy groomed golden retriever at Beauty Pets" loading="eager" />
+      </div>
       <div class="hero-card hero-card-1">
         <span class="dot" aria-hidden="true"></span>
         <div>
@@ -1544,17 +1518,17 @@ footer {
 
       <div class="map-wrap reveal">
         <a
-          href="https://www.google.com/maps/place/Beauty+Pets+-+Damac+Hills+2/@24.9849319,55.3930266,132m/data=!3m1!1e3!4m6!3m5!1s0x3e5f7b9eb3382f35:0xf279ee85fa29b615!8m2!3d24.98508!4d55.3938132!16s%2Fg%2F11wr3g1f5x?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
+          href="https://www.google.com/maps/search/?api=1&query=Madinat%20Hind%204%20Damac%20Hills%202%20Dubai%20UAE"
           target="_blank"
           rel="noopener noreferrer"
           class="map-link"
           aria-label="Open Beauty Pets location in Google Maps"
         >
           <iframe
-            src="https://www.google.com/maps?q=24.9849319,55.3930266&z=18&output=embed"
+            src="https://www.google.com/maps?q=Madinat%20Hind%204%20Damac%20Hills%202%20Dubai%20UAE&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Beauty Pets — Damac Hills 2, Dubai Map">
+            title="Beauty Pets — Madinat Hind 4, Damac Hills 2, Dubai Map">
           </iframe>
         </a>
       </div>
@@ -1633,10 +1607,11 @@ footer {
       </div>
     </div>
 
-      <div class="foot-bottom">
-    <span>© <span id="year"></span> Beauty Pets · Damac Hills 2 · Dubai, UAE. All rights reserved.</span>
-    <span class="foot-credit">Website by <a href="https://afaq-digital.vercel.app" target="_blank" rel="noopener">AFAQ Digital</a></span>
-  </div></div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Beauty Pets · Damac Hills 2 · Dubai, UAE. All rights reserved.</span>
+      <span class="foot-credit">Website by <a href="https://afaq-digital.vercel.app" target="_blank" rel="noopener">AFAQ Digital</a></span>
+    </div>
+  </div>
 </footer>
 
 <!-- ============ WhatsApp Float ============ -->
