@@ -843,6 +843,22 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.foot-credit {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: rgba(247, 243, 235, 0.38);
+}
+.foot-credit a {
+  color: rgba(247, 243, 235, 0.52);
+  border-bottom: 1px solid rgba(247, 243, 235, 0.18);
+  transition: color .25s ease, border-color .25s ease;
+}
+.foot-credit a:hover {
+  color: var(--gold);
+  border-color: var(--gold-soft);
+}
 
 /* ============ WhatsApp Float ============ */
 .whatsapp-float {
@@ -1576,6 +1592,7 @@ footer {
       <span>© <span id="year"></span> Beauty Pets · Damac Hills 2 · Dubai, UAE. All rights reserved.</span>
       <span>Crafted with care for every paw, fin &amp; feather.</span>
     </div>
+    <p class="foot-credit">Website by <a href="https://afaq-digital.vercel.app" target="_blank" rel="noopener">AFAQ Digital</a></p>
   </div>
 </footer>
 
